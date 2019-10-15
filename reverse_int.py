@@ -8,6 +8,8 @@
 #    reverseInt(-15) === -51
 #    reverseInt(-90) === -9
 
+# REPL: https://repl.it/@DamyanPeykov/Reverse-Int
+
 # Solution 1: converting the int and using slices
 def reverse_int(num):
     if num < 0:
