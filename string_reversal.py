@@ -6,6 +6,8 @@
 #    reverse('hello') === 'olleh'
 #    reverse('Greetings!') === '!sgniteerG'
 
+# REPL: https://repl.it/@DamyanPeykov/stringreversal
+
 # Solution 1: loop O(n) 
 s = "hello"
 
