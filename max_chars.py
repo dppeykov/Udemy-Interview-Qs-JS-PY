@@ -6,6 +6,7 @@
 #  maxChar("apple 1231111") === "1"
 
 # OTHER QUESTIONS LIKE THIS: anagrams & repeated characters in string
+# REPL: https://repl.it/@DamyanPeykov/MaxCharPython
 
 # Solution 1: using a loop - my own solution
 s = "apple 1231111"
