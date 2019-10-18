@@ -8,6 +8,9 @@
 #    anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 #    anagrams('Hi there', 'Bye there') --> False
 
+# REPL: https://repl.it/@DamyanPeykov/Anagrams
+
+# Solution 1: my solution - just clean the strings, create dict maps and compare them
 import re
 from collections import Counter
 
@@ -43,7 +46,5 @@ s1_map = create_map(s1)
 s2_map = create_map(s2)
 
 print(checking_if_anagrams(s1_map, s2_map))
-
-
 
     
