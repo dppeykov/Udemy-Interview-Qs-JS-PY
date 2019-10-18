@@ -33,6 +33,7 @@ def create_map(s):
 
 # Important: if 1 clean string is longer than the other, they are not anagrams
 def checking_if_anagrams(map1, map2):
+    # > or < basically means not equal, so see solution 2 for a shorter syntax
     if len(s1_clean) > len(s2_clean) or len(s1_clean) < len(s2_clean):
         return False
     elif map1 == map2:
@@ -46,5 +47,37 @@ s1_map = create_map(s1)
 s2_map = create_map(s2)
 
 print(checking_if_anagrams(s1_map, s2_map))
+
+
+# Solution 2: course's solution - again cleans, creates maps and compares 
+
+def anagrams(string_a, string_b):
+    a_char_map = build_char_map(string_a)
+    b_char_map = build_char_map(string_b)
+
+    # to find the length, we can look at the number of keys
+    if len(a_char_map.keys()) != len(b_char_map.keys()):
+        return False
+    # another way to solve the problem is by looping through both maps (dicts)
+    else:
+        for k,v in a_char_map.items():
+            # cheking if the number of letters are different
+            if a_char_map[k] != b_char_map[k]:
+                return False
+        return True
+
+def build_char_map(s):
+    char_map = {}
+
+    for char in re.sub(r'[^\w]','',s).lower():
+        if char in char_map:
+            char_map[char] += 1 
+        else: 
+            char_map[char] = 1 
+
+    return char_map
+
+print(anagrams(s1, s2))
+
 
     
