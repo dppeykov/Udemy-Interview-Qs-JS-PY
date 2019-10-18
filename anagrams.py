@@ -14,8 +14,8 @@
 import re
 from collections import Counter
 
-s1 = 'Hi there'
-s2 = 'Bye there'
+s1 = 'RAIL! SAFETY!'
+s2 = 'fairy tales'
 
 # removes the spaces and the punctuation + returns the string in lowercase
 def clean(s):
@@ -89,8 +89,11 @@ def anagrams_2(s_a, s_b):
 
 def clean_s(s):
     # [^\w] - mathes any char that is not (^) a word (\w)
-    return "".join(sorted(list(re.sub(r'[^\w]','',s).lower())))
+    # OPTION 1: WE CAN CLEAR, CONVERT TO A LIST AND SORT
+    # return "".join(sorted(list(re.sub(r'[^\w]','',s).lower())))
     # WORKS AS WELL WITH LIST ONLY: 
     #return sorted(list(re.sub(r'[^\w]','',s).lower()))
+    # WORKS ON THE STRING DIRECTLY: 
+    return sorted(re.sub(r'[^\w]','',s).lower())
 
 print(anagrams_2(s1, s2))
