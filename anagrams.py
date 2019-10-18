@@ -14,8 +14,8 @@
 import re
 from collections import Counter
 
-s1 = 'rail safety'
-s2 = 'fairy tales'
+s1 = 'Hi there'
+s2 = 'Bye there'
 
 # removes the spaces and the punctuation + returns the string in lowercase
 def clean(s):
@@ -78,6 +78,20 @@ def build_char_map(s):
     return char_map
 
 print(anagrams(s1, s2))
+
+# Solution 3 - using sorting - clean the data and return it sorted as a string, then compare the 2 strings
+
+def anagrams_2(s_a, s_b):
+    if clean_s(s_a) == clean_s(s_b):
+        return True
+    return False
+
+
+def clean_s(s):
+    # [^\w] - mathes any char that is not (^) a word (\w)
+    return "".join(sorted(list(re.sub(r'[^\w]','',s).lower())))
+
+print(anagrams_2(s1, s2))
 
 
     
