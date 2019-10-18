@@ -90,8 +90,7 @@ def anagrams_2(s_a, s_b):
 def clean_s(s):
     # [^\w] - mathes any char that is not (^) a word (\w)
     return "".join(sorted(list(re.sub(r'[^\w]','',s).lower())))
+    # WORKS AS WELL WITH LIST ONLY: 
+    #return sorted(list(re.sub(r'[^\w]','',s).lower()))
 
 print(anagrams_2(s1, s2))
-
-
-    
