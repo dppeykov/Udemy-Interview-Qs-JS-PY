@@ -95,5 +95,6 @@ def clean_s(s):
     #return sorted(list(re.sub(r'[^\w]','',s).lower()))
     # WORKS ON THE STRING DIRECTLY: 
     return sorted(re.sub(r'[^\w]','',s).lower())
+    # without regex: s.replace(" ", "").replace("!","").lower()
 
 print(anagrams_2(s1, s2))
