@@ -1,5 +1,6 @@
 # This is an unittest file for the string_reversal.py!
 # Never runs in production - just for development to check if all works fine
+# I'm using unittest, but also can be used pytest - some courses in linkedin
 
 import unittest
 import string_reversal
